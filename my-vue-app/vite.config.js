@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-06-05 21:41:59
+ * @LastEditTime: 2021-06-05 22:04:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vite\my-vue-app\vite.config.js
@@ -10,7 +10,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
-
+import { viteMockServe } from 'vite-plugin-mock';
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -19,5 +19,5 @@ export default defineConfig({
       comps: path.resolve(__dirname, 'src/components'),
     },
   },
-  plugins: [vue()],
+  plugins: [vue(), viteMockServe({ supportTs: false })],
 });
