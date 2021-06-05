@@ -1,10 +1,18 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-06-02 22:46:49
+ * @LastEditTime: 2021-06-05 21:42:24
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \vite\my-vue-app\src\App.vue
+-->
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from 'comps/HelloWorld.vue';
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
 // Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
