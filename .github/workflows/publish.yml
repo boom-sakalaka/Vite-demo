@@ -30,7 +30,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
           ARGS: '-avz --delete'
-          SOURCE: 'my-vue-app/dist'
+          SOURCE: 'dist'
           REMOTE_HOST: '159.75.105.253'
           REMOTE_USER: 'root'
           TARGET: '/var/opt/front'
