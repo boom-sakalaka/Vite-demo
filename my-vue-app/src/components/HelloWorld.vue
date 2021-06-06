@@ -1,14 +1,15 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-06-05 22:08:37
+ * @LastEditTime: 2021-06-06 09:56:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vite\my-vue-app\src\components\HelloWorld.vue
 -->
 <template>
   <h1>{{ msg }}</h1>
-
+  <p>{{ $store.state.couter }}</p>
+  <button @click="$store.commit('add')">加一</button>
   <p>
     <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite Documentation</a>
     |
