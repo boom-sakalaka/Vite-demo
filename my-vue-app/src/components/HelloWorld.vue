@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-06-06 10:03:18
+ * @LastEditTime: 2021-06-06 10:33:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vite\my-vue-app\src\components\HelloWorld.vue
@@ -9,7 +9,7 @@
 <template>
   <h1>{{ msg }}</h1>
   <p>{{ $store.state.couter }}</p>
-  <button @click="$store.commit('add')">加一</button>
+  <el-button @click="$store.commit('add')">加一</el-button>
   <p>
     <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite Documentation</a>
     |
