@@ -1,0 +1,36 @@
+# main.yml
+name: deploy to aliyun
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 切换分支
+      - name: Checkout
+        uses: actions/checkout@master
+      # 使用 node:10
+      - name: use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.0.0
+      # npm install
+      - name: npm install and build
+        run: |
+          cd my-vue-app
+          npm install
+          npm run build
+        env:
+          CI: true
+      # Deploy
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@v2.0.7
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+          ARGS: '-avz --delete'
+          SOURCE: 'my-vue-app/dist'
+          REMOTE_HOST: '159.75.105.253'
+          REMOTE_USER: 'root'
+          TARGET: '/var/opt/front'
