@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-06-06 09:56:40
+ * @LastEditTime: 2021-06-06 10:03:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vite\my-vue-app\src\components\HelloWorld.vue
@@ -39,8 +39,4 @@ fetch('/api/getUsers').then(res => {
 });
 </script>
 
-<style scoped>
-a {
-  color: #42b983;
-}
-</style>
+<style scoped></style>
