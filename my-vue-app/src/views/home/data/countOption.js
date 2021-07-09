@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-07-09 14:28:31
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-09 15:14:48
+ * @LastEditTime: 2021-07-09 16:13:52
  * @FilePath: \Vite-demo\my-vue-app\src\views\home\data\countOption.js
  * @Description:
  */
@@ -16,12 +16,12 @@ export const useCount = () => {
 
   // 生命周期函数
   let timer;
-  onMounted(() => {
-    timer = setInterval(() => {
-      console.log(1);
-      countOption.count++;
-    }, 1000);
-  });
+  // onMounted(() => {
+  //   timer = setInterval(() => {
+  //     console.log(1);
+  //     countOption.count++;
+  //   }, 1000);
+  // });
 
   onUnmounted(() => {
     clearInterval(timer);

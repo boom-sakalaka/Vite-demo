@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-06 09:41:09
- * @LastEditTime: 2021-07-09 15:51:51
+ * @LastEditTime: 2021-07-09 16:14:51
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\src\views\home\index.vue
@@ -13,6 +13,7 @@
     <div>name---{{ name }}</div>
     <div ref="desc">元素引用测试</div>
     <ModalButton />
+    <Emits @success="clickfn" />
   </div>
 </template>
 
@@ -21,11 +22,13 @@ import { useCount } from '@/views/home/data/countOption';
 import { ref, toRefs } from '@vue/reactivity';
 import { onMounted, watch } from '@vue/runtime-core';
 import ModalButton from '@/views/ModalButton/index.vue';
+import Emits from '@/views/Emits/index.vue';
 
 export default {
   name: 'home',
   components: {
     ModalButton,
+    Emits,
   },
   setup() {
     const countOption = useCount();
@@ -50,12 +53,16 @@ export default {
         divDom.textContent = 'counter change' + val;
       }
     );
+    const clickfn = () => {
+      console.log('click');
+    };
     return {
       // count,
       // doubleCount,
       ...toRefs(countOption),
       name,
       desc,
+      clickfn,
     };
   },
 };
