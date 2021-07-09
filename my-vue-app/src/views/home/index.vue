@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-06 09:41:09
- * @LastEditTime: 2021-07-09 16:14:51
+ * @LastEditTime: 2021-07-09 17:10:14
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\src\views\home\index.vue
@@ -14,6 +14,7 @@
     <div ref="desc">元素引用测试</div>
     <ModalButton />
     <Emits @success="clickfn" />
+    <MyVModel :count="count" @update:count="count = $event" />
   </div>
 </template>
 
@@ -23,12 +24,14 @@ import { ref, toRefs } from '@vue/reactivity';
 import { onMounted, watch } from '@vue/runtime-core';
 import ModalButton from '@/views/ModalButton/index.vue';
 import Emits from '@/views/Emits/index.vue';
+import MyVModel from '@/views/v-modal/index.vue';
 
 export default {
   name: 'home',
   components: {
     ModalButton,
     Emits,
+    MyVModel,
   },
   setup() {
     const countOption = useCount();
