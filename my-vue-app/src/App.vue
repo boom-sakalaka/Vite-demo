@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-06-06 10:01:09
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-07-09 14:10:39
+ * @LastEditors: GZH
  * @Description: In User Settings Edit
- * @FilePath: \vite\my-vue-app\src\App.vue
+ * @FilePath: \Vite-demo\my-vue-app\src\App.vue
 -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <router-view></router-view>
 </template>
 
