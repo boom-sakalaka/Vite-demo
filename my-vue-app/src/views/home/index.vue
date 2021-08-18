@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-06 09:41:09
- * @LastEditTime: 2021-08-18 17:15:19
+ * @LastEditTime: 2021-08-18 19:06:35
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\src\views\home\index.vue
@@ -20,6 +20,17 @@
 </template>
 
 <script>
+// 1.函数式： 类型支持更好 ts
+// 2.标准化、简化 一致性
+// 3.tree-shaking  Vue2.x 方法挂载在原型上或者实例中，不好割离， Vue3 composition api 通过 import 导入，利于做tree-shaking
+// 4.复用性 composition api
+// 5.性能优化 编译期的优化 // vue3 diff 算法优化 ，Vue2 会每个节点都对比 、、、vue3 通过打tag标记的方式标注那些节点需要更新 只会对需要变化的节点对比
+// 6.扩展性：自定义渲染器 // Vue2 需要通过函数柯里化返回一个新的path去更新挂载节点 ，Vue3 直接拓展平台相关的api
+// 带来的直观感受就是 打包后代码体积更小，程序运行速度更快
+
+// vite 本质是起了一个后端服务，通过不同的请求返回文件，例如node_modules里面 的文件就不要处理，其余的文件就处理后返回
+// vite 打包还是依赖了 rollup 的， 并且插件也是兼容rollup 插件的
+
 import { useCount } from '@/views/home/data/countOption';
 import { ref, toRefs } from '@vue/reactivity';
 import { onMounted, watch, watchEffect } from '@vue/runtime-core';

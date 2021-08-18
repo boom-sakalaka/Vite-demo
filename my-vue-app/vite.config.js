@@ -1,10 +1,10 @@
 /*
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-06-06 10:36:38
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-08-18 19:11:05
+ * @LastEditors: GZH
  * @Description: In User Settings Edit
- * @FilePath: \vite\my-vue-app\vite.config.js
+ * @FilePath: \Vite-demo\my-vue-app\vite.config.js
  */
 
 import { defineConfig } from 'vite';
@@ -21,5 +21,22 @@ export default defineConfig({
       plugins: path.resolve(__dirname, 'src/plugins'),
     },
   },
+  // 数组方式 导入插件
   plugins: [vue(), viteMockServe({ supportTs: false })],
+  // server: {
+  //   // 指定服务器主机名
+  //   host: '0.0.0.0',
+  //   // 开发环境启动的端口号
+  //   port: 3008,
+  //   // 是否在开发环境下自动打开应用程序
+  //   open: true,
+  //   // 代理
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://jsonplaceholder.typicode.com',
+  //       changeOrigin: true,
+  //       rewrite: path => path.replace(/^\/api/, ''),
+  //     },
+  //   },
+  // },
 });
