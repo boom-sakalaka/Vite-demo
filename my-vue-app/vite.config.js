@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-08-18 19:11:05
+ * @LastEditTime: 2021-08-18 19:16:28
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\vite.config.js
@@ -21,6 +21,7 @@ export default defineConfig({
       plugins: path.resolve(__dirname, 'src/plugins'),
     },
   },
+
   // 数组方式 导入插件
   plugins: [vue(), viteMockServe({ supportTs: false })],
   // server: {
