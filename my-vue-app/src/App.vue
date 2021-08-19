@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-08-18 17:26:10
+ * @LastEditTime: 2021-08-19 19:24:03
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\src\App.vue
@@ -9,7 +9,7 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <div>
-    <router-link to="/">首页</router-link>
+    <router-link to="/">首页22222</router-link>
     |
     <router-link to="/lifeCycle">生命周期</router-link>
     |
