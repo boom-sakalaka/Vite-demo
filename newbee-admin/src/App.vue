@@ -5,7 +5,7 @@
         <!--系统名称+logo-->
         <div class="head">
           <div>
-            <img src="//s.weituibao.com/1582958061265/mlogo.png" alt="logo" />
+            <!-- <img src="//s.weituibao.com/1582958061265/mlogo.png" alt="logo" /> -->
             <span>vue3 admin</span>
           </div>
         </div>
