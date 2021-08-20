@@ -19,7 +19,8 @@ jobs:
       # npm install
       - name: npm install and build
         run: |
-          cd my-vue-app
+          # cd my-vue-app
+          cd newbee-admin
           npm install
           npm run build
         env:
@@ -30,7 +31,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
           ARGS: '-avz --delete'
-          SOURCE: 'my-vue-app/dist'
+          SOURCE: 'newbee-admin/dist'
           REMOTE_HOST: '159.75.105.253'
           REMOTE_USER: 'root'
           TARGET: '/var/opt/front'
