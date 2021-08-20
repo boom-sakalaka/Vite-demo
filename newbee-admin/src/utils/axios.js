@@ -2,12 +2,14 @@
  * @Author: GZH
  * @Date: 2021-08-20 15:32:15
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-20 15:38:53
- * @FilePath: \newbee-admin\src\utils\axios.js
+ * @LastEditTime: 2021-08-20 16:05:22
+ * @FilePath: \Vite-demo\newbee-admin\src\utils\axios.js
  * @Description:
  */
 
 import axios from 'axios';
+import { ElMessage } from 'element-plus';
+import { localGet } from './index';
 import router from '@/router';
 import config from '~/config';
 
@@ -17,17 +19,17 @@ axios.defaults.baseURL = config[import.meta.env.MODE].baseUrl;
 axios.defaults.withCredentials = true;
 // 请求头，headers 信息
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest';
-axios.defaults.headers['token'] = localStorage.getItem('token') || '';
+axios.defaults.headers['token'] = localGet('token') || '';
 
 // 默认 post 请求，使用 application/json 形式
 axios.defaults.headers.post['Content-Type'] = 'application/json'; // 请求拦截器，内部根据返回值，重新组装，统一管理。
 axios.interceptors.response.use(res => {
   if (typeof res.data !== 'object') {
-    alert('服务端异常！');
+    ElMessage.error('服务端异常！');
     return Promise.reject(res);
   }
   if (res.data.resultCode != 200) {
-    if (res.data.message) alert(res.data.message);
+    if (res.data.message) ElMessage.error(res.data.message);
     if (res.data.resultCode == 419) {
       router.push({ path: '/login' });
     }

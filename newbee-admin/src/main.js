@@ -1,18 +1,22 @@
 /*
  * @Author: GZH
- * @Date: 2021-08-20 15:18:45
+ * @Date: 2021-08-20 15:45:03
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-20 15:40:43
- * @FilePath: \newbee-admin\src\main.js
+ * @LastEditTime: 2021-08-20 15:57:05
+ * @FilePath: \Vite-demo\newbee-admin\src\main.js
  * @Description:
  */
 import { createApp } from 'vue';
 import App from './App.vue';
-import ElementPlus from 'element-plus';
+import { ElButton } from 'element-plus';
 import router from '@/router';
+
 import 'element-plus/lib/theme-chalk/index.css';
 
 const app = createApp(App);
+
 app.use(router);
-app.use(ElementPlus);
+
+app.use(ElButton);
+
 app.mount('#app');
