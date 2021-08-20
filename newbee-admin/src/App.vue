@@ -24,16 +24,22 @@
                   <i class="el-icon-data-line" />
                   首页
                 </el-menu-item>
+                <el-menu-item index="/add">
+                  <i class="el-icon-data-line" />
+                  添加商品
+                </el-menu-item>
               </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
       </el-aside>
       <el-container class="content">
+        <Header />
         <div class="main">
           <!--将 <router-view></router-view> 移到这里，并且用单标签-->
           <router-view />
         </div>
+        <Footer />
       </el-container>
     </el-container>
   </div>
@@ -41,6 +47,8 @@
 
 <script>
 import { ElContainer, ElAside, ElMenu, ElMenuItem, ElMenuItemGroup } from 'element-plus';
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 export default {
   name: 'App',
   components: {
@@ -49,6 +57,8 @@ export default {
     ElMenu,
     ElMenuItem,
     ElMenuItemGroup,
+    Header,
+    Footer,
   },
 };
 </script>
@@ -96,7 +106,7 @@ export default {
   overflow: hidden;
 }
 .main {
-  height: 100vh;
+  height: calc(100vh - 100px);
   overflow: auto;
   padding: 10px;
 }

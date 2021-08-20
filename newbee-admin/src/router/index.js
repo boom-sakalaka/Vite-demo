@@ -2,8 +2,8 @@
  * @Author: GZH
  * @Date: 2021-08-20 15:21:01
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-20 15:29:46
- * @FilePath: \newbee-admin\src\router\index.js
+ * @LastEditTime: 2021-08-20 17:44:01
+ * @FilePath: \Vite-demo\newbee-admin\src\router\index.js
  * @Description:
  */
 import { createRouter, createWebHashHistory } from 'vue-router';
@@ -14,7 +14,13 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'index',
       component: Index,
+    },
+    {
+      path: '/add',
+      name: 'add',
+      component: () => import('../views/AddGood.vue'),
     },
   ],
 });
