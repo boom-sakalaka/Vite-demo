@@ -22,7 +22,8 @@ jobs:
           # cd my-vue-app
           cd newbee-admin
           npm install
-          npm run build
+          # npm run build
+          npm run build:release
         env:
           CI: true
       # Deploy
