@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 15:21:01
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-23 09:26:44
+ * @LastEditTime: 2021-08-23 11:15:23
  * @FilePath: \Vite-demo\newbee-admin\src\router\index.js
  * @Description:
  */
@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: () => import('../views/Login.vue'),
+    },
+    {
+      path: '/swiper',
+      name: 'swiper',
+      component: () => import('../views/Swiper.vue'),
     },
   ],
 });

@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-23 09:20:35
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-23 10:09:40
+ * @LastEditTime: 2021-08-23 11:09:06
  * @FilePath: \Vite-demo\newbee-admin\src\views\Login.vue
  * @Description: 
 -->
@@ -31,6 +31,7 @@
             登录表示您已同意
             <a>《服务条款》</a>
           </div>
+          <div style="color: #333">账号: admin; 密码: 123456</div>
           <el-button style="width: 100%" type="primary" @click="submitForm">立即登录</el-button>
           <el-checkbox v-model="checked" @change="!checked">下次自动登录</el-checkbox>
         </el-form-item>
@@ -59,8 +60,8 @@ export default {
     const loginForm = ref(null);
     const state = reactive({
       ruleForm: {
-        username: '', // 账号
-        password: '', // 密码
+        username: 'admin', // 账号
+        password: '123456', // 密码
       },
       checked: true,
       // 表单验证判断。

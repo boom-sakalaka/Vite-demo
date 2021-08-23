@@ -11,21 +11,36 @@
         </div>
         <!--一条为了美观的线条-->
         <div class="line" />
-        <el-menu background-color="#222832" text-color="#fff" :router="true" default-active="1">
-          <!--一级栏目-->
+        <el-menu
+          background-color="#222832"
+          text-color="#fff"
+          :router="true"
+          :default-openeds="defaultOpen"
+          :default-active="currentPath"
+        >
           <el-submenu index="1">
             <template #title>
               <span>Dashboard</span>
             </template>
-            <!--二级栏目-->
             <el-menu-item-group>
               <el-menu-item index="/">
-                <i class="el-icon-data-line" />
+                <i class="el-icon-odometer" />
                 首页
               </el-menu-item>
               <el-menu-item index="/add">
-                <i class="el-icon-data-line" />
+                <i class="el-icon-plus" />
                 添加商品
+              </el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="2">
+            <template #title>
+              <span>首页配置</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/swiper">
+                <i class="el-icon-picture" />
+                轮播图配置
               </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
@@ -72,6 +87,8 @@ export default {
     const router = useRouter();
     const state = reactive({
       showMenu: true, // 是否需要显示菜单
+      defaultOpen: ['1', '2'],
+      currentPath: '/',
     });
     // 监听路由的变化
     router.beforeEach((to, from, next) => {
@@ -89,6 +106,7 @@ export default {
         }
       }
       state.showMenu = !noMenu.includes(to.path);
+      state.currentPath = to.path;
       document.title = pathMap[to.name];
     });
 
