@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 15:21:01
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-20 17:44:01
+ * @LastEditTime: 2021-08-23 09:26:44
  * @FilePath: \Vite-demo\newbee-admin\src\router\index.js
  * @Description:
  */
@@ -21,6 +21,11 @@ const router = createRouter({
       path: '/add',
       name: 'add',
       component: () => import('../views/AddGood.vue'),
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/Login.vue'),
     },
   ],
 });

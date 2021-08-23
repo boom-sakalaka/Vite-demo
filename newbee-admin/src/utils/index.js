@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 16:03:52
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-20 16:04:13
+ * @LastEditTime: 2021-08-23 10:02:01
  * @FilePath: \Vite-demo\newbee-admin\src\utils\index.js
  * @Description:
  */
@@ -22,3 +22,10 @@ export function localSet(key, value) {
 export function localRemove(key) {
   window.localStorage.removeItem(key);
 }
+
+// src/utils/index.js
+export const pathMap = {
+  index: '首页',
+  login: '登录',
+  add: '添加商品',
+};
