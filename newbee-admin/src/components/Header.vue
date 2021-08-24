@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 17:26:48
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-23 10:51:46
+ * @LastEditTime: 2021-08-24 09:31:14
  * @FilePath: \Vite-demo\newbee-admin\src\components\Header.vue
  * @Description: 
 -->
@@ -72,7 +72,7 @@ export default {
     };
 
     router.afterEach(to => {
-      console.log('to', to);
+      // console.log('to', to);
       const { id } = to.query;
       state.name = pathMap[to.name];
     });

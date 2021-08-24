@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 15:21:01
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-23 11:15:23
+ * @LastEditTime: 2021-08-24 09:29:13
  * @FilePath: \Vite-demo\newbee-admin\src\router\index.js
  * @Description:
  */
@@ -23,14 +23,29 @@ const router = createRouter({
       component: () => import('../views/AddGood.vue'),
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/Login.vue'),
-    },
-    {
       path: '/swiper',
       name: 'swiper',
       component: () => import('../views/Swiper.vue'),
+    },
+    {
+      path: '/hot',
+      name: 'hot',
+      component: () => import('../views/IndexConfig.vue'),
+    },
+    {
+      path: '/new',
+      name: 'new',
+      component: () => import('../views/IndexConfig.vue'),
+    },
+    {
+      path: '/recommend',
+      name: 'recommend',
+      component: () => import('../views/IndexConfig.vue'),
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/Login.vue'),
     },
   ],
 });

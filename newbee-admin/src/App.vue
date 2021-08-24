@@ -42,6 +42,18 @@
                 <i class="el-icon-picture" />
                 轮播图配置
               </el-menu-item>
+              <el-menu-item index="/hot">
+                <i class="el-icon-star-on" />
+                热销商品配置
+              </el-menu-item>
+              <el-menu-item index="/new">
+                <i class="el-icon-sell" />
+                新品上线配置
+              </el-menu-item>
+              <el-menu-item index="/recommend">
+                <i class="el-icon-thumb" />
+                为你推荐配置
+              </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
