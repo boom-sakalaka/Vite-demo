@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 15:21:01
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-24 09:29:13
+ * @LastEditTime: 2021-08-24 11:35:36
  * @FilePath: \Vite-demo\newbee-admin\src\router\index.js
  * @Description:
  */
@@ -41,6 +41,23 @@ const router = createRouter({
       path: '/recommend',
       name: 'recommend',
       component: () => import('../views/IndexConfig.vue'),
+    },
+    {
+      path: '/category',
+      name: 'category',
+      component: () => import('../views/Category.vue'),
+      children: [
+        {
+          path: '/category/level2',
+          name: 'level2',
+          component: () => import('../views/Category.vue'),
+        },
+        {
+          path: '/category/level3',
+          name: 'level3',
+          component: () => import('../views/Category.vue'),
+        },
+      ],
     },
     {
       path: '/login',

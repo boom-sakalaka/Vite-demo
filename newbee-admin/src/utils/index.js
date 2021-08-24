@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 16:03:52
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-24 09:41:59
+ * @LastEditTime: 2021-08-24 11:39:32
  * @FilePath: \Vite-demo\newbee-admin\src\utils\index.js
  * @Description:
  */
@@ -32,6 +32,9 @@ export const pathMap = {
   hot: '热销商品配置',
   new: '新品上线配置',
   recommend: '为你推荐配置',
+  category: '分类管理',
+  level2: '分类二级管理',
+  level3: '分类三级管理',
 };
 
 // 单张图片上传
