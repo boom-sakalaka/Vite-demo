@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 15:32:15
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-23 10:13:20
+ * @LastEditTime: 2021-08-25 16:01:12
  * @FilePath: \Vite-demo\newbee-admin\src\utils\axios.js
  * @Description:
  */
@@ -36,7 +36,7 @@ axios.interceptors.response.use(res => {
     return Promise.reject(res.data);
   }
 
-  return res.data.data;
+  return res?.data?.data;
 });
 
 export default axios;
