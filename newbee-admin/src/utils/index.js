@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 16:03:52
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-24 11:39:32
+ * @LastEditTime: 2021-08-26 09:46:45
  * @FilePath: \Vite-demo\newbee-admin\src\utils\index.js
  * @Description:
  */
@@ -35,7 +35,10 @@ export const pathMap = {
   category: '分类管理',
   level2: '分类二级管理',
   level3: '分类三级管理',
+  good: '商品管理',
 };
 
 // 单张图片上传
 export const uploadImgServer = 'http://backend-api-02.newbee.ltd/manage-api/v1/upload/file';
+// 多张图片上传
+export const uploadImgsServer = 'http://backend-api-02.newbee.ltd/manage-api/v1/upload/files';

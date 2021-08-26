@@ -65,6 +65,10 @@
                 <i class="el-icon-menu" />
                 分类管理
               </el-menu-item>
+              <el-menu-item index="/good">
+                <i class="el-icon-s-goods" />
+                商品管理
+              </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
