@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 16:03:52
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-26 09:46:45
+ * @LastEditTime: 2021-08-26 10:45:22
  * @FilePath: \Vite-demo\newbee-admin\src\utils\index.js
  * @Description:
  */
@@ -36,6 +36,8 @@ export const pathMap = {
   level2: '分类二级管理',
   level3: '分类三级管理',
   good: '商品管理',
+  order: '订单管理',
+  order_detail: '订单详情',
 };
 
 // 单张图片上传

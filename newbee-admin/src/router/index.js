@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-20 15:21:01
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-26 09:30:12
+ * @LastEditTime: 2021-08-26 10:45:51
  * @FilePath: \Vite-demo\newbee-admin\src\router\index.js
  * @Description:
  */
@@ -63,6 +63,16 @@ const router = createRouter({
       path: '/good',
       name: 'good',
       component: () => import('../views/Good.vue'),
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: () => import('../views/Order.vue'),
+    },
+    {
+      path: '/order_detail',
+      name: 'order_detail',
+      component: () => import('../views/OrderDetail.vue'),
     },
     {
       path: '/login',
