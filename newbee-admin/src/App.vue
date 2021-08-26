@@ -79,6 +79,17 @@
               </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
+          <el-submenu index="4">
+            <template #title>
+              <span>系统管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/account">
+                <i class="el-icon-lock" />
+                修改密码
+              </el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-aside>
       <el-container class="content">
@@ -122,7 +133,7 @@ export default {
     const router = useRouter();
     const state = reactive({
       showMenu: true, // 是否需要显示菜单
-      defaultOpen: ['1', '2', '3'],
+      defaultOpen: ['1', '2', '3', '4'],
       currentPath: '/',
     });
     // 监听路由的变化
