@@ -19,11 +19,11 @@ jobs:
       # npm install
       - name: npm install and build
         run: |
-          # cd my-vue-app
-          cd newbee-admin
+          cd my-vue-app
+          # cd newbee-admin
           npm install
-          # npm run build
-          npm run build:release
+          npm run build
+          # npm run build:release
         env:
           CI: true
       # Deploy
