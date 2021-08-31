@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-23 09:20:35
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-31 12:23:09
+ * @LastEditTime: 2021-08-31 13:11:40
  * @FilePath: \Vite-demo\newbee-admin\src\views\Login.vue
  * @Description: 
 -->
@@ -10,13 +10,13 @@
   <div class="login-body">
     <div>
       <h2>camear</h2>
-      <input type="file" accept="image/*" capture="camera" />
+      <input type="file" accept="image/*" capture="camera" @change="getImgfn" ref="InputFile" />
       <br />
-      <h2>camcorder</h2>
+      <!-- <h2>camcorder</h2>
       <input type="file" accept="video/*" capture="camcorder" />
       <br />
       <h2>microphone</h2>
-      <input type="file" accept="audio/*" capture="microphone" />
+      <input type="file" accept="audio/*" capture="microphone" /> -->
     </div>
     <!--登录框div-->
     <div class="login-container">
@@ -46,6 +46,8 @@
           <el-checkbox v-model="checked" @change="!checked">下次自动登录</el-checkbox>
         </el-form-item>
       </el-form>
+
+      <img :src="imgUrl" />
     </div>
   </div>
 </template>
@@ -111,11 +113,26 @@ export default {
       loginForm.value.resetFields();
     };
 
+    const InputFile = ref(null);
+    const imgUrl = ref(null);
+    const getImgfn = () => {
+      console.log(InputFile.value.files);
+      const filePath = InputFile.value.files[0];
+      const reader = new FileReader();
+      reader.readAsDataURL(filePath);
+      reader.onload = function (e) {
+        console.log(this.result);
+        imgUrl.value = this.result;
+      };
+    };
     return {
       ...toRefs(state),
       loginForm, // 注意，一定要返回 loginForm
       submitForm,
       resetForm,
+      getImgfn,
+      InputFile,
+      imgUrl,
     };
   },
 };
