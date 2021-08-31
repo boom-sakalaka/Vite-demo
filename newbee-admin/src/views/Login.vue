@@ -2,12 +2,22 @@
  * @Author: GZH
  * @Date: 2021-08-23 09:20:35
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-23 11:09:06
+ * @LastEditTime: 2021-08-31 12:23:09
  * @FilePath: \Vite-demo\newbee-admin\src\views\Login.vue
  * @Description: 
 -->
 <template>
   <div class="login-body">
+    <div>
+      <h2>camear</h2>
+      <input type="file" accept="image/*" capture="camera" />
+      <br />
+      <h2>camcorder</h2>
+      <input type="file" accept="video/*" capture="camcorder" />
+      <br />
+      <h2>microphone</h2>
+      <input type="file" accept="audio/*" capture="microphone" />
+    </div>
     <!--登录框div-->
     <div class="login-container">
       <!--登录框头部logo部分-->
