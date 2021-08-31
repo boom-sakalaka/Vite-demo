@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-23 09:20:35
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-31 13:11:40
+ * @LastEditTime: 2021-08-31 13:37:32
  * @FilePath: \Vite-demo\newbee-admin\src\views\Login.vue
  * @Description: 
 -->
@@ -19,8 +19,7 @@
       <input type="file" accept="audio/*" capture="microphone" /> -->
     </div>
     <!--登录框div-->
-    <div class="login-container">
-      <!--登录框头部logo部分-->
+    <!-- <div class="login-container">
       <div class="head">
         <img class="logo" src="https://s.weituibao.com/1582958061265/mlogo.png" />
         <div class="name">
@@ -46,9 +45,9 @@
           <el-checkbox v-model="checked" @change="!checked">下次自动登录</el-checkbox>
         </el-form-item>
       </el-form>
+    </div> -->
 
-      <img :src="imgUrl" />
-    </div>
+    <img :src="imgUrl" />
   </div>
 </template>
 
