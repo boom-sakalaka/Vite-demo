@@ -2,16 +2,16 @@
  * @Author: GZH
  * @Date: 2021-08-23 09:20:35
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-31 13:37:32
+ * @LastEditTime: 2021-09-06 10:28:01
  * @FilePath: \Vite-demo\newbee-admin\src\views\Login.vue
  * @Description: 
 -->
 <template>
   <div class="login-body">
     <div>
-      <h2>camear</h2>
+      <!-- <h2>camear</h2>
       <input type="file" accept="image/*" capture="camera" @change="getImgfn" ref="InputFile" />
-      <br />
+      <br /> -->
       <!-- <h2>camcorder</h2>
       <input type="file" accept="video/*" capture="camcorder" />
       <br />
@@ -19,7 +19,7 @@
       <input type="file" accept="audio/*" capture="microphone" /> -->
     </div>
     <!--登录框div-->
-    <!-- <div class="login-container">
+    <div class="login-container">
       <div class="head">
         <img class="logo" src="https://s.weituibao.com/1582958061265/mlogo.png" />
         <div class="name">
@@ -45,9 +45,9 @@
           <el-checkbox v-model="checked" @change="!checked">下次自动登录</el-checkbox>
         </el-form-item>
       </el-form>
-    </div> -->
+    </div>
 
-    <img :src="imgUrl" />
+    <!-- <img :src="imgUrl" /> -->
   </div>
 </template>
 
