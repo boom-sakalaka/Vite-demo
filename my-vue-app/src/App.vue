@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-08-31 12:10:37
+ * @LastEditTime: 2021-10-29 16:04:50
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\src\App.vue
@@ -16,16 +16,8 @@
     <router-link to="/setupProps">setup的参数</router-link>
     |
     <router-link to="/privideInject">Privide/Inject</router-link>
-    <div>
-      <h2>camear</h2>
-      <input type="file" accept="image/*" capture="camera" />
-      <br />
-      <h2>camcorder</h2>
-      <input type="file" accept="video/*" capture="camcorder" />
-      <br />
-      <h2>microphone</h2>
-      <input type="file" accept="audio/*" capture="microphone" />
-    </div>
+    |
+    <router-link to="/setupSugar">setup--语法糖</router-link>
     <router-view></router-view>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-06 09:41:09
- * @LastEditTime: 2021-08-18 19:06:35
+ * @LastEditTime: 2021-11-05 14:24:17
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\src\views\home\index.vue
@@ -16,6 +16,8 @@
     <ModalButton />
     <Emits @success="clickfn" />
     <MyVModel :count="count" @update:count="count = $event" />
+
+    <span @contextmenu.prevent="handleOpenContext">右键打开菜单api测试</span>
   </div>
 </template>
 
@@ -105,6 +107,11 @@ export default {
     const clickfn = () => {
       console.log('child click');
     };
+
+    const handleOpenContext = e => {
+      console.warn(e);
+    };
+
     return {
       // count,
       // doubleCount,
@@ -112,6 +119,7 @@ export default {
       name,
       desc,
       clickfn,
+      handleOpenContext,
     };
   },
 };
