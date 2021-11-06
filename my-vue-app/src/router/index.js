@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-06 09:38:04
- * @LastEditTime: 2021-11-06 13:55:41
+ * @LastEditTime: 2021-11-06 15:35:27
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\src\router\index.js
@@ -29,6 +29,10 @@ const router = createRouter({
         {
           path: '/myDirective/copy',
           component: () => import('../views/MyDirective/copy/index.vue'),
+        },
+        {
+          path: '/myDirective/realImg',
+          component: () => import('../views/MyDirective/realImg/index.vue'),
         },
       ],
     },
