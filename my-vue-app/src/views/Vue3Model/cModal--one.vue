@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-06 13:50:11
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-06 14:04:07
+ * @LastEditTime: 2021-11-06 17:30:37
  * @FilePath: \Vite-demo\my-vue-app\src\views\Vue3Model\cModal--one.vue
  * @Description: 
 -->
@@ -15,5 +15,10 @@
 defineProps({
   modelValue: String,
 });
+const emit = defineEmits(['update:modelValue']);
+
+setTimeout(() => {
+  emit('update:modelValue', '测试');
+}, 1000);
 </script>
 <style lang="scss" scoped></style>
