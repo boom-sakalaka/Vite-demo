@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-06 09:38:04
- * @LastEditTime: 2021-10-29 16:04:09
+ * @LastEditTime: 2021-11-06 13:55:41
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\src\router\index.js
@@ -17,6 +17,21 @@ const router = createRouter({
     { path: '/setupProps', component: () => import('../views/setupProps/index.vue') },
     { path: '/privideInject', component: () => import('../views/privideInject/index.vue') },
     { path: '/setupSugar', component: () => import('../views/setup/index.vue') },
+    { path: '/Vue3Model', component: () => import('../views/Vue3Model/index.vue') },
+    {
+      path: '/myDirective',
+      component: () => import('../views/MyDirective/index.vue'),
+      children: [
+        {
+          path: '/myDirective/autoFocus',
+          component: () => import('../views/MyDirective/autoFocus/index.vue'),
+        },
+        {
+          path: '/myDirective/copy',
+          component: () => import('../views/MyDirective/copy/index.vue'),
+        },
+      ],
+    },
   ],
 });
 

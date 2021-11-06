@@ -2,13 +2,13 @@
  * @Author: GZH
  * @Date: 2021-08-18 17:24:33
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-18 18:10:52
+ * @LastEditTime: 2021-11-06 13:38:05
  * @FilePath: \Vite-demo\my-vue-app\src\views\privideInject\grandSon.vue
  * @Description: 
 -->
 <template>
   <div>
-    <h4>name: {{ name1 }}</h4>
+    <h4>name: {{ name }}</h4>
     <h4>info: {{ info }}</h4>
   </div>
 </template>

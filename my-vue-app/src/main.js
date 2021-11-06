@@ -1,10 +1,10 @@
 /*
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-06-06 10:38:21
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-11-06 11:05:45
+ * @LastEditors: GZH
  * @Description: In User Settings Edit
- * @FilePath: \vite\my-vue-app\src\main.js
+ * @FilePath: \Vite-demo\my-vue-app\src\main.js
  */
 import { createApp } from 'vue';
 import App from './App.vue';
@@ -21,4 +21,16 @@ import 'styles/index.scss';
 //element3
 import element3 from 'plugins/element3';
 
-createApp(App).use(router).use(store).use(element3).mount('#app');
+// 导入自定义指令
+import { myDirective } from './Directive/index.js';
+
+const app = createApp(App);
+
+//在vue中注册自定义指令
+Object.keys(myDirective).forEach(key => {
+  app.directive(key, myDirective[key]);
+});
+
+app.use(router).use(store).use(element3);
+
+app.mount('#app');

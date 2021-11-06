@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-02 22:46:49
- * @LastEditTime: 2021-10-29 16:04:50
+ * @LastEditTime: 2021-11-06 13:55:50
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \Vite-demo\my-vue-app\src\App.vue
@@ -17,7 +17,10 @@
     |
     <router-link to="/privideInject">Privide/Inject</router-link>
     |
-    <router-link to="/setupSugar">setup--语法糖</router-link>
+    <router-link to="/Vue3Model">Vue3-v-modal的变化</router-link>
+    |
+    <router-link to="/myDirective">自定义指令</router-link>
+
     <router-view></router-view>
   </div>
 </template>
