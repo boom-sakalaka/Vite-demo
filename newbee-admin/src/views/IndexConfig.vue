@@ -2,8 +2,8 @@
  * @Author: GZH
  * @Date: 2021-08-24 09:26:50
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-24 10:15:58
- * @FilePath: \Vite-demo\newbee-admin\src\views\IndexConfig.vue
+ * @LastEditTime: 2021-11-09 15:18:48
+ * @FilePath: \newbee-admin\src\views\IndexConfig.vue
  * @Description: 
 -->
 <template>
@@ -67,7 +67,7 @@
 
 <script>
 import { ElCard, ElTable, ElTableColumn, ElPopconfirm, ElPagination, ElButton, ElMessage } from 'element-plus';
-import { onMounted, reactive, ref, toRefs } from 'vue';
+import { onMounted, reactive, ref, toRefs, onUnmounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import axios from '@/utils/axios';
 import DialogAddGood from '@/components/DialogAddGood.vue';
@@ -104,8 +104,9 @@ export default {
       configType: 3, // 3-(首页)热销商品 4-(首页)新品上线 5-(首页)为你推荐
       multipleSelection: [], // 选中项
     });
+
     // 监听路由变化
-    router.beforeEach(to => {
+    const unwatch = router.beforeEach(to => {
       if (['hot', 'new', 'recommend'].includes(to.name)) {
         // 通过 to.name 去匹配不同路径下，configType 参数也随之变化。
         state.configType = configTypeMap[to.name];
@@ -118,6 +119,12 @@ export default {
       state.configType = configTypeMap[route.name];
       getIndexConfig();
     });
+
+    onUnmounted(() => {
+      // 在组件注销的时候记得要把路由守卫注销，不然会出现多次请求的情况
+      unwatch();
+    });
+
     // 首页热销商品列表
     const getIndexConfig = () => {
       state.loading = true;
